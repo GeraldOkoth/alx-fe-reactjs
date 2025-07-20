@@ -1,18 +1,11 @@
 import React from "react";
 
 function MainContent() {
-  const favouriteCities = {
-    fontWeight: "bold",
-    color: "blue",
 
-  };
   return (
     <div>
       <main>
-        <p>
-          I love to visit <span style={favouriteCities}>New York</span>, <span style={favouriteCities}>Paris</span>, and{" "}
-          <span style={favouriteCities}>Tokyo</span>.
-        </p>
+        <p>I love to visit New York, Paris, and Tokyo.</p>
       </main>
     </div>
   );
