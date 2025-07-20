@@ -4,10 +4,10 @@ import React, {
   Routes,
 } from "react-router-dom";
 import "./App.css";
-import Home from "./Home";
-import About from "./About";
-import Services from "./Services";
-import Contact from "./Contact";
+import Home from "./components/Home";
+import About from "./components/About";
+import Services from "./components/Services";
+import Contact from "./components/Contact";
 
 function App() {
   return (
