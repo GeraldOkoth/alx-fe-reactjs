@@ -1,8 +1,8 @@
 // RecipeList component
-import recipeStore from "./recipeStore";
+import usRecipeStore from "./recipeStore";
 
 const RecipeList = () => {
-  const recipes = recipeStore((state) => state.recipes);
+  const recipes = usRecipeStore((state) => state.recipes);
 
   return (
     <div>
