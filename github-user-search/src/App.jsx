@@ -1,17 +1,22 @@
-// import { useState } from 'react'
-// import {createBrowserRouter, RouterProvider} from 'react-router-dom'
-import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Search from './components/Search';
+import "./App.css";
 
 function App() {
-
   return (
     <>
-      <div>
-        <h1>API Intergration</h1>
-
-      </div>
+      <BrowserRouter>
+          <div>
+            {/* <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes> */}
+            <Search />
+          </div>
+        </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
