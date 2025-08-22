@@ -20,7 +20,7 @@ export const searchUsers = async (searchParams, page = 1, perPage = 10) => {
       query += ` language:${searchParams.language}`;
     }
 
-    const response = await axios.get(`${BASE_URL}/search/users`, {
+    const response = await axios.get("https://api.github.com/search/users?q", {
       params: {
         q: query.trim(),
         page: page,
