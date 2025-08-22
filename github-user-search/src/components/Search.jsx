@@ -207,7 +207,7 @@ const Search = () => {
         {error && (
           <div className="bg-red-50 border border-red-200 rounded-lg p-6 text-center">
             <div className="text-red-600 text-lg font-semibold mb-2">
-              Oops! 😢
+              Looks like we cant find the user.
             </div>
             <p className="text-red-700">{error}</p>
           </div>
