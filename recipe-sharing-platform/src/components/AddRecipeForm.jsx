@@ -25,8 +25,8 @@ const AddRecipeForm = () => {
 
     const instructionsArray = instructions
       .split("\n")
-      .map((step) => step.trim())
-      .filter((step) => step);
+      .map((steps) => steps.trim())
+      .filter((steps) => steps);
 
     if (ingredientsArray.length < 2) {
       setError("Please provide at least two ingredients.");
