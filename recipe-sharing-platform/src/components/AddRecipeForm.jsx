@@ -7,14 +7,14 @@ const AddRecipeForm = () => {
   const [title, setTitle] = useState("");
   const [ingredients, setIngredients] = useState("");
   const [instructions, setInstructions] = useState("");
-  const [error, setError] = useState("");
+  const [errors, setErrors] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validation
+    // Validate
     if (!title || !ingredients || !instructions) {
-      setError("All fields are required!");
+      setErrors("All fields are required!");
       return;
     }
 
@@ -29,7 +29,7 @@ const AddRecipeForm = () => {
       .filter((steps) => steps);
 
     if (ingredientsArray.length < 2) {
-      setError("Please provide at least two ingredients.");
+      setErrors("Please provide at least two ingredients.");
       return;
     }
 
@@ -47,7 +47,7 @@ const AddRecipeForm = () => {
     setTitle("");
     setIngredients("");
     setInstructions("");
-    setError("");
+    setErrors("");
     alert("Recipe added successfully!");
   };
 
@@ -55,8 +55,8 @@ const AddRecipeForm = () => {
     <div className="max-w-2xl mx-auto p-6 bg-white shadow-md rounded-lg mt-8">
       <h2 className="text-2xl font-bold mb-4 text-center">Add a New Recipe</h2>
 
-      {error && (
-        <p className="text-red-500 text-sm mb-4 text-center">{error}</p>
+      {errors && (
+        <p className="text-red-500 text-sm mb-4 text-center">{errors}</p>
       )}
 
       <form onSubmit={handleSubmit} className="space-y-4">
