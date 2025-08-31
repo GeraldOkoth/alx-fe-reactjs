@@ -6,7 +6,7 @@ const HomePage = () => {
 
   // Load recipes from local data.json
   useEffect(() => {
-    fetch("/src/data/data.json")
+    fetch("/src/data.json")
       .then((res) => res.json())
       .then((data) => setRecipes(data))
       .catch((err) => console.error("Error loading recipes:", err));
